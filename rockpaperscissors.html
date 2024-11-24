@@ -22,8 +22,9 @@ let choice;
 let userScore = 0
 let computerScore = 0
 let num;
+let gameRounds = 0
 
-while (userScore < 5 && computerScore < 5) {
+while (gameRounds < 5) {
  
     num = Math.random()
     if (num <= 1/3) {
@@ -67,6 +68,8 @@ while (userScore < 5 && computerScore < 5) {
     } else {
         console.log("Next round... \n")
     }
+
+    gameRounds++
 }
 
 
