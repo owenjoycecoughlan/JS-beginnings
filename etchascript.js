@@ -35,6 +35,7 @@ button.addEventListener("click", () => {
     makeGrid();
 })
 
+
 function makeGrid() {
     for (let i = 0; i < gridSize; i++) {
         let gridSquare = document.createElement("div");
@@ -44,9 +45,14 @@ function makeGrid() {
         gridSquare.style.backgroundColor = "blue";
         gridSquare.style.display = "flex";
         gridSquare.addEventListener("mouseover", () => {
-            gridSquare.style.backgroundColor = "black"
+            let red = Math.round(Math.random()*255)
+            let green = Math.round(Math.random()*255)
+            let blue = Math.round(Math.random()*255)
+            gridSquare.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
         }
         );
         container.appendChild(gridSquare);
     }
 }
+
+
